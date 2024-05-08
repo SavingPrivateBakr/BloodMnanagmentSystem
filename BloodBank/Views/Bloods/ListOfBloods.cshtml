@@ -1,0 +1,35 @@
+﻿@model List<Blood>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="~/css/styles.css.css" asp-append-version="true" />
+</head>
+
+@{
+    ViewData["Title"] = "Donation";
+}
+<body>
+    @{
+        foreach(var i in Model)
+        {
+            <h1>@i.BloodType</h1>
+            
+            if (User.Identity.IsAuthenticated == false)
+            {
+                <a asp-route-Id="@i.Id" asp-Controller="Bloods" asp-action="Add">Add it to my hospital</a>
+            }
+            if (User.IsInRole("nurse"))
+            {
+                <a asp-route-Id="@i.Id"  asp-Controller="Bloods" asp-action="Delete">Delete</a>
+            }
+        }
+    }
+
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
+</body>
+</html>

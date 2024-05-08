@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="~/css/HomeCss.css" asp-append-version="true" />
+
+   
+   
+</head>
+<body>
+
+
+  
+        <div class="Nav-bar">
+            <a class="a" asp-controller="HomeController" asp-action="Index">
+                Home
+            </a>
+        <a class="a" asp-controller="Hospitals" asp-action="Hospital">
+                Hospitals
+            </a>
+  
+            <a class="a" asp-controller="Donors" asp-action="Donor">
+                Donors
+            </a>
+
+        <a class="a" asp-controller="Bloods" asp-action="ListOfBloods">
+            ListOfBloods
+        </a>
+        
+           
+        @{
+           
+            if (User.Identity.IsAuthenticated==false)
+            {
+                <a asp-controller="Account" asp-action="Register">
+                    Register
+                </a>
+
+                <a asp-controller="Account" asp-action="Login">
+                    Login
+                </a>
+            }
+
+            else if(User.Identity.IsAuthenticated==true)
+            {
+                <a asp-controller="Account" asp-action="logout">
+                    LogOut
+                </a>
+            }
+        }
+        </div>
+
+       
+
+
+       
+              @RenderBody()
+           
+      
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

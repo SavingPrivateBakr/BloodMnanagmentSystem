@@ -1,0 +1,66 @@
+﻿@model Blood
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="~/css/styles.css.css" asp-append-version="true" />
+</head>
+
+@{
+    ViewData["Title"] = "Donation";
+}
+<body>
+   <h1>Donation</h1>
+
+
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+               <form asp-action="Donor">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <input type="text" name="fieldName" value="@User.Identity.Name" readonly >
+                </div>
+
+
+            
+                    <input asp-for="Availability"  value="1" hidden>
+             
+                <div class="form-group">
+                       <label asp-for="BloodType" class="control-label"></label>
+                       <select asp-for="BloodType" class="form-control">
+                              <option value="O-">O-</option>
+                           <option value="O+">O+</option>
+                              <option value="A+">A+</option>
+                                 <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                       <option value="B-">B-</option>
+                                          <option value="AB+">AB+</option>
+                                             <option value="AB-">AB-</option>
+                        </select>
+
+
+                       <span asp-validation-for="BloodType" class="text-danger"></span>
+                </div>
+               
+              
+           
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
+</body>
+</html>

@@ -1,0 +1,12 @@
+C:\Users\momen\source\repos\BloodBank\UnitWork\bin\Debug\net8.0\UnitWork.deps.json
+C:\Users\momen\source\repos\BloodBank\UnitWork\bin\Debug\net8.0\UnitWork.dll
+C:\Users\momen\source\repos\BloodBank\UnitWork\bin\Debug\net8.0\UnitWork.pdb
+C:\Users\momen\source\repos\BloodBank\UnitWork\obj\Debug\net8.0\UnitWork.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\momen\source\repos\BloodBank\UnitWork\obj\Debug\net8.0\UnitWork.AssemblyInfoInputs.cache
+C:\Users\momen\source\repos\BloodBank\UnitWork\obj\Debug\net8.0\UnitWork.AssemblyInfo.cs
+C:\Users\momen\source\repos\BloodBank\UnitWork\obj\Debug\net8.0\UnitWork.csproj.CoreCompileInputs.cache
+C:\Users\momen\source\repos\BloodBank\UnitWork\obj\Debug\net8.0\UnitWork.dll
+C:\Users\momen\source\repos\BloodBank\UnitWork\obj\Debug\net8.0\refint\UnitWork.dll
+C:\Users\momen\source\repos\BloodBank\UnitWork\obj\Debug\net8.0\UnitWork.pdb
+C:\Users\momen\source\repos\BloodBank\UnitWork\obj\Debug\net8.0\ref\UnitWork.dll
+C:\Users\momen\source\repos\BloodBank\UnitWork\obj\Debug\net8.0\UnitWork.csproj.AssemblyReference.cache
